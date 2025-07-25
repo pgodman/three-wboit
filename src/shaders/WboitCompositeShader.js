@@ -49,7 +49,7 @@ const WboitCompositeShader = {
 
 			vec4 accum = texture2D( tAccumulation, vUv );
 
-			vec4 composite = vec4( accum.rgb / clamp( accum.a, 0.0001, 50000.0 ), reveal );
+			vec4 composite = vec4( accum.rgb / clamp( accum.a, 0.0001, 50000.0 ), 1.0 - reveal );
 			vec4 color = clamp( composite, 0.01, 300.0 );
 
 			// LinearTosRGB( color );
